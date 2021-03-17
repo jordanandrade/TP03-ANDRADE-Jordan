@@ -1,0 +1,14 @@
+<h1>Bienvenue sur le plus beau site de comparateur de voiture</h1>
+
+<br/>
+<button (click)="onClickGetVoiture()"> Afficher les produits </button>
+<br/>
+<div  *ngFor = "let v of observableBouchon$ | async">
+    Voiture : {{v.modele}} - Prix : {{v.prix}} 
+</div>
+<br/>
+<button (click)="onClickGetVoitureCher()"> Trouvez la voiture > à </button><input [(ngModel)]="prixVoiture">
+<div  *ngFor = "let v of tableauVoiture">
+    Voiture : {{v.modele}} - Prix : {{v.prix}} 
+</div>
+
